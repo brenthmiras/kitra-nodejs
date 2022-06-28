@@ -8,31 +8,29 @@ module.exports = {
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
-    firstName: {
+    name: {
       type: Sequelize.STRING,
+      allowNull: false,
     },
-    lastName: {
-      type: Sequelize.STRING,
+    age: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
     },
     email: {
       type: Sequelize.STRING,
+      allowNull: false,
     },
     password: {
       type: Sequelize.STRING,
-    },
-    profilePic: {
-      type: Sequelize.STRING,
-    },
-    isAdmin: {
-      type: Sequelize.BOOLEAN,
-      defaultValue: false,
+      allowNull: false,
     },
     createdAt: {
       allowNull: false,
       type: Sequelize.DATE,
+      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
     },
     updatedAt: {
-      allowNull: false,
+      allowNull: true,
       type: Sequelize.DATE,
     },
   }),
