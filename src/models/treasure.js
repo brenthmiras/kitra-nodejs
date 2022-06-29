@@ -14,16 +14,18 @@ module.exports = (sequelize, DataTypes) => {
   }
   Treasure.init(
     {
-      name: DataTypes.STRING,
-      allowNull: false,
-    },
-    {
-      latitude: DataTypes.DOUBLE,
-      allowNull: false,
-    },
-    {
-      longitude: DataTypes.DOUBLE,
-      allowNull: false,
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      latitude: {
+        type: DataTypes.DOUBLE,
+        allowNull: false,
+      },
+      longitude: {
+        type: DataTypes.DOUBLE,
+        allowNull: false,
+      },
     },
     {
       sequelize,

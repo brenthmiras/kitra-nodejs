@@ -13,12 +13,14 @@ module.exports = (sequelize, DataTypes) => {
   }
   MoneyValue.init(
     {
-      amt: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    {
-      treasure_id: DataTypes.INTEGER,
-      allowNull: false,
+      amt: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      treasure_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
     },
     {
       sequelize,
